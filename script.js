@@ -21,11 +21,11 @@ for (var i=0; themeDots.length > i; i++){
 
 function setTheme(mode){
 	if(mode == 'light'){
-		document.getElementById('theme-style').href = 'default.css'
+		document.getElementById('theme-style').href = 'css/default.css'
 	}
 
 	if(mode == 'dark'){
-		document.getElementById('theme-style').href = 'dark.css'
+		document.getElementById('theme-style').href = 'css/dark.css'
 	}
 	localStorage.setItem('theme', mode)
 }
