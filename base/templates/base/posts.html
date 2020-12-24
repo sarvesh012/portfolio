@@ -1,0 +1,43 @@
+{% extends 'base/main.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="projects-container">
+    <h3 style="text-align: center;">My Best Projects</h3>
+    <div id="projects" class="projects-wraper">
+        <div>
+            <div class="post">
+                <img class="thumbnail" src="{% static 'img/my-portfolio.jpg' %}">
+                <div class="post-preview">
+                    <h6 class="post-title">My portfolio website</h6>
+                    <p class="post-intro">Hand coded my portfolio website with HTML, CSS, Js and usig Python Django in back-end for my blog posts.</p>
+                    <a href="{% url 'post' %}">Read More</a>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="post">
+                <img class="thumbnail" src="{% static 'img/adi.jpg' %}">
+                <div class="post-preview">
+                    <h6 class="post-title">Laboratory Management System</h6>
+                    <p class="post-intro">Designed built & mantained a the lab managment system for FOI Laboratories</p>
+                    <a href="{% url 'post' %}">Read More</a>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="post">
+                <img class="thumbnail" src="{% static 'img/adi.jpg' %}">
+                <div class="post-preview">
+                    <h6 class="post-title">Laboratory Management System</h6>
+                    <p class="post-intro">Designed built & mantained a the lab managment system for FOI Laboratories</p>
+                    <a href="{% url 'post' %}">Read More</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}

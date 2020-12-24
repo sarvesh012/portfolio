@@ -1,0 +1,120 @@
+{% extends 'base/main.html' %}
+{% load static %}
+
+
+{% block content %}
+
+<section class="me">
+    <div class="about-wraper">
+        <div class="left-col">
+            <div>
+                <img id="profile_pic" src="{% static 'img/adi.jpg' %}">
+                <h3 style="text-align: center;">Hi, I'm Adrian Allkoci</h3>
+                <p>I'm a junior full-stack web developer focused in web development.</p>
+                <p>Positive and pragmatic attitude, independent, selflearner.
+
+                    Especially interested and curious in new callenges building webapps.</p>
+                <br>
+            </div>
+            <div class="social-links">
+                <ul>
+                    <li>Google: <a href="#" target="_blank">@AdrianAllkoci</a></li>
+                    <li>Facebook: <a href="#" target="_blank">@AdrianAllkoci</a></li>
+                    <li>Instagram: <a href="#" target="_blank">@AdrianAllkoci</a></li>
+                </ul>
+                <ul>
+                    <li>Github: <a href="#" target="_blank">@AdrianAllkoci</a></li>
+                    <li>Linkedin: <a href="#" target="_blank">@AdrianAllkoci</a></li>
+                    <li>Twitter: <a href="#" target="_blank">@AdrianAllkoci</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="right-col">
+            <h3>My Skills</h3>
+            <p>Fullstack developer with primary focus on Django + JavaScript.</p>
+            <p>My projects are primarily coded using HTML5, CSS3 & JavaScript for Static websites and Portfolios.</p>
+            <p>I am loving to code with Python and Django in back-end for creating webapps.</p>
+            <div class="skills">
+                <ul>
+                    <li>Python</li>
+                    <li>Django</li>
+                    <li>Postgres</li>
+                    <!-- <li>AWS (RDS/S3)</li> -->
+                    <li>Git</li>
+                </ul>
+
+                <ul>
+                    <li>HTML/CSS</li>
+                    <li>Bootstrap</li>
+                    <li>JavaScript</li>
+                    <!-- <li>React</li> -->
+                </ul>
+
+            </div>
+        </div>
+        
+    </div>
+</section>
+<section class="projects">
+    <div class="projects-container">
+        <h3 style="text-align: center;">My Best Projects</h3>
+        <div id="projects" class="projects-wraper">
+            <div>
+                <div class="post">
+                    <img class="thumbnail" src="{% static 'img/my-portfolio.jpg' %}">
+                    <div class="post-preview">
+                        <h6 class="post-title">My portfolio website</h6>
+                        <p class="post-intro">Hand coded my portfolio website with HTML, CSS, Js and usig Python Django in back-end for my blog posts.</p>
+                        <a href="{% url 'post' %}">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="post">
+                    <img class="thumbnail" src="{% static 'img/adi.jpg' %}">
+                    <div class="post-preview">
+                        <h6 class="post-title">Laboratory Management System</h6>
+                        <p class="post-intro">Designed built & mantained a the lab managment system for FOI Laboratories</p>
+                        <a href="{% url 'post' %}">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="post">
+                    <img class="thumbnail" src="{% static 'img/adi.jpg' %}">
+                    <div class="post-preview">
+                        <h6 class="post-title">Laboratory Management System</h6>
+                        <p class="post-intro">Designed built & mantained a the lab managment system for FOI Laboratories</p>
+                        <a href="{% url 'post' %}">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<section class="contact">
+    <div class="contact-container">
+        <h3 style="text-align: center;">Contact Me</h3>
+
+        <form id="contact-form">
+            <a name="contact"></a>
+
+            <label>Name</label>
+            <input class="input-field" type="text" name="name">
+
+            <label>Subject</label>
+            <input class="input-field" type="text" name="subject">
+
+            <label>Email</label>
+            <input class="input-field" type="text" name="email">
+
+            <label>Message</label>
+            <textarea class="input-field" name="message"></textarea>
+
+            <input id="submit-btn" type="submit" value="Send">
+        </form>
+    </div>
+</section> 
+
+{% endblock %}

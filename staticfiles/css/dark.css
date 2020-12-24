@@ -1,0 +1,23 @@
+:root{
+	--mainColor:#2d353d;
+	--secondaryColor:#222b33;
+
+	--borderColor:#677f83;
+
+	--mainText:#fff;
+	--secondaryText:#dddddd;
+
+	--themeDotBorder:#FFF;
+
+	--background-box:#44443dcc;
+
+    --linkColor: #4da9b9;
+
+	--buttonColor:#426e91;
+
+
+}
+
+body{
+	background: var(--mainColor);
+}
