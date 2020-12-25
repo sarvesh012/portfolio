@@ -8,7 +8,7 @@
     <div class="about-wraper">
         <div class="left-col">
             <div>
-                <img id="profile_pic" src="{% static 'img/adi.jpg' %}">
+                <img id="profile_pic" src="{% static 'img/img/adi.jpg' %}">
                 <h3 style="text-align: center;">Hi, I'm Adrian Allkoci</h3>
                 <p>I'm a junior full-stack web developer focused in web development.</p>
                 <p>Positive and pragmatic attitude, independent, selflearner.
@@ -55,41 +55,22 @@
         
     </div>
 </section>
-<section class="projects">
+<section id="projects" class="projects">
     <div class="projects-container">
         <h3 style="text-align: center;">My Best Projects</h3>
-        <div id="projects" class="projects-wraper">
+        <div class="projects-wraper">
+            {% for post in posts %}
             <div>
                 <div class="post">
-                    <img class="thumbnail" src="{% static 'img/my-portfolio.jpg' %}">
+                    <img class="thumbnail" src="{{post.thumbnail.url}}">
                     <div class="post-preview">
-                        <h6 class="post-title">My portfolio website</h6>
-                        <p class="post-intro">Hand coded my portfolio website with HTML, CSS, Js and usig Python Django in back-end for my blog posts.</p>
-                        <a href="{% url 'post' %}">Read More</a>
+                        <h6 class="post-title">"{{post.headline}}"</h6>
+                        <p class="post-intro">"{{post.sub_headline}}"</p>
+                        <a href="{% url 'post' post.id %}">Read More</a>
                     </div>
                 </div>
             </div>
-            <div>
-                <div class="post">
-                    <img class="thumbnail" src="{% static 'img/adi.jpg' %}">
-                    <div class="post-preview">
-                        <h6 class="post-title">Laboratory Management System</h6>
-                        <p class="post-intro">Designed built & mantained a the lab managment system for FOI Laboratories</p>
-                        <a href="{% url 'post' %}">Read More</a>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <div class="post">
-                    <img class="thumbnail" src="{% static 'img/adi.jpg' %}">
-                    <div class="post-preview">
-                        <h6 class="post-title">Laboratory Management System</h6>
-                        <p class="post-intro">Designed built & mantained a the lab managment system for FOI Laboratories</p>
-                        <a href="{% url 'post' %}">Read More</a>
-                    </div>
-                </div>
-            </div>
-
+            {% endfor %}
         </div>
     </div>
 </section>

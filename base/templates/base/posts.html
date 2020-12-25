@@ -1,43 +1,42 @@
 {% extends 'base/main.html' %}
 {% load static %}
 
+{% block head-links %} 
+    <link rel="stylesheet" href="{% static 'css/posts.css' %}">
+{% endblock %}
+
 {% block content %}
 
+<section class="projects">
 <div class="projects-container">
     <h3 style="text-align: center;">My Best Projects</h3>
     <div id="projects" class="projects-wraper">
+        {% for post in posts%}
         <div>
             <div class="post">
-                <img class="thumbnail" src="{% static 'img/my-portfolio.jpg' %}">
+                <img class="thumbnail" src="{{post.thumbnail.url}}">
                 <div class="post-preview">
-                    <h6 class="post-title">My portfolio website</h6>
-                    <p class="post-intro">Hand coded my portfolio website with HTML, CSS, Js and usig Python Django in back-end for my blog posts.</p>
-                    <a href="{% url 'post' %}">Read More</a>
+                    <h6 class="post-title">{{post.headline}}</h6>
+                    <p class="post-intro">{{post.sub_headline}}</p>
+                    <a href="{% url 'post' post.id %}">Read More</a>
+
+                    {% if request.user.is_authenticated %}
+                        <a href="{% url 'update_post' post.id %}">/ Edit</a>
+                        <a href="{% url 'delete_post' post.id %}">/ Delete</a>
+                    {% endif %}
+
+                    <hr>
+                    {% for tag in post.tags.all %}
+                        <span class="tags">{{tag}}</span>
+                    {% endfor %}
                 </div>
             </div>
         </div>
-        <div>
-            <div class="post">
-                <img class="thumbnail" src="{% static 'img/adi.jpg' %}">
-                <div class="post-preview">
-                    <h6 class="post-title">Laboratory Management System</h6>
-                    <p class="post-intro">Designed built & mantained a the lab managment system for FOI Laboratories</p>
-                    <a href="{% url 'post' %}">Read More</a>
-                </div>
-            </div>
-        </div>
-        <div>
-            <div class="post">
-                <img class="thumbnail" src="{% static 'img/adi.jpg' %}">
-                <div class="post-preview">
-                    <h6 class="post-title">Laboratory Management System</h6>
-                    <p class="post-intro">Designed built & mantained a the lab managment system for FOI Laboratories</p>
-                    <a href="{% url 'post' %}">Read More</a>
-                </div>
-            </div>
-        </div>
+        {% empty %}
+            <h3>No posts found...</h3>
+        {% endfor %}
 
     </div>
 </div>
-
+</section>
 {% endblock %}

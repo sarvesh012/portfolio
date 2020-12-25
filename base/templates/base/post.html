@@ -1,13 +1,20 @@
 {% extends 'base/main.html' %}
 {% load static %}
+{% block head-links %}
+    <link rel="stylesheet" href="{% static 'css/posts.css' %}">
+{% endblock %}
 
 {% block content %}
 
-<div class="projects-container">
-    <h1>Post</h1>
-    <img style="width: 200px; " src="{% static 'img/my-portfolio.jpg' %}" alt="">
+<div class="blog-wraper">
+    <div class="blog-post">
+        <img class="thumbnail" src="{{post.thumbnail.url}}" alt="">
+        <h1>{{post.headline}}</h1>
 
-    <p>hdf fheu hfuehdehhd euhduewihd hwedueh ewdehdhewuhdehuehw dhewdewihdueh  deh dew </p>
+        <h4>{{post.sub_headline}}</h4>
+
+        <p>{{body}}</p>
+    </div>
 </div>
 
 {% endblock %}
