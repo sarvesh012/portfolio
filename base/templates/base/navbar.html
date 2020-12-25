@@ -2,17 +2,11 @@
 <section class="nav-section">
     <div class="nav-wraper">
             <ul id="navigation">
-            {% if request.user.is_authenticated %}
-            <li><a href="{% url 'home' %}">Home/ </a></li>
-            <li><a href="{% url 'posts' %}">Blog/ </a></li>
-            <li><a href="{% url 'create_post' %}">newPost</a></li>
-            {% else %}
             <li><a href="{% url 'home' %}">Home/ </a></li>
             <li><a href="{% url 'home' %}#projects">Projects/ </a></li>
             <!-- <li><a href="#">Resume/</a></li> -->
             <li><a href="{% url 'posts' %}">Blog/ </a></li>
             <li><a href="{% url 'home' %}#contact">Contact/</a></li>
-            {% endif %}
             </ul>
             <div id="theme-options-wrapper">
                 <div data-mode="light" id="light-mode" class="theme-dot"></div>
