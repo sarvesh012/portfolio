@@ -28,7 +28,12 @@
     let static = "{% static 'css' %}"
 </script>
 
-<script type="text/javascript" src="{% static 'js/main.js' %}" defer></script>
+<script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+
+{% block scripts %}
+
+{% endblock scripts %}
+
 
 </body>
 </html>
