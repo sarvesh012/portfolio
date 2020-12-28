@@ -9,12 +9,12 @@
 <div class="blog-wraper">
     <div class="blog-post">
         <img class="post-thumbnail" src="{{post.thumbnail.url}}" alt="">
-        <h1>{{post.headline}}</h1>
+        <!-- <h1>{{post.headline}}</h1> -->
         <h2>{{post.headline}}</h2>
 
         <h6>{{post.sub_headline}}</h6>
 
-        <p>{{body}}</p>
+        <p>{{post.body|safe}}</p>
     </div>
 </div>
 
