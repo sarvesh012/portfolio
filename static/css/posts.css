@@ -1,8 +1,9 @@
 
+
+
 /* posts.html style */
 
 .projects{
-    margin-top: 60px;
     background-color: var(--mainColor);
     border-bottom: none;
 }
@@ -16,6 +17,23 @@
     padding: 2px 5px;
     font-size: 12px;
 }
+
+/* search style */
+
+.search{
+    display: flex;
+	justify-content: center;
+}
+
+#myInput{
+    width: 90%;
+    margin-bottom: 20px;
+    margin-top: 60px;
+    padding: 5px 10px;
+    border: 2px solid var(--borderColor);
+    border-radius: .25rem;
+}
+
 
 /* post.html style */
 .blog-wraper{
@@ -31,11 +49,12 @@
 
 }
 
-.thumbnail{
+.post-thumbnail{
     margin: 0 auto;
 	display: block;
 	max-width: 100%;
-	height: auto;
+	max-height: 500px;
 	/* object-fit: cover; */
 }
+
 
