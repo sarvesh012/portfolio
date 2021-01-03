@@ -1,5 +1,5 @@
 
-import os
+# import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -32,6 +32,8 @@ INSTALLED_APPS = [
     'ckeditor',
     'ckeditor_uploader',
 ]
+
+SECURE_BROWSER_XSS_FILTER = True
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -76,6 +78,17 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+# pip install psycopg2 before using PostgreSQL
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': YOUR_DB_NAME,
+#         'USER': USERNAME,
+#         'PASSWORD': PASSWORD_FOR_DB,
+#         'HOST': 'localhost'  // in Development,
+#         'PORT': '5432'
+#     }
+# }
 
 
 # Password validation
@@ -118,12 +131,16 @@ STATIC_URL = '/static/'
 MEDIA_URL = '/img/'
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static')
+    # os.path.join(BASE_DIR, 'static')
+    BASE_DIR / 'static',
 ]
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'static/img')
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+MEDIA_ROOT = BASE_DIR / 'static/img'
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'static/img')
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
+# Email config
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
@@ -131,6 +148,7 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'adialb982@gmail.com'
 EMAIL_HOST_PASSWORD = 'pwspoendnrnpwpbu'
 
+# Ckeditor config
 CKEDITOR_UPLOAD_PATH = 'uploads/'
 
 CKEDITOR_CONFIGS = {

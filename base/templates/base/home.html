@@ -62,11 +62,17 @@
             {% for post in posts %}
             <article class="post">
                 <div>
-                    <img class="thumbnail" src="{{post.thumbnail.url}}">
+                    <a href="{% url 'post' post.slug %}"><img class="thumbnail" src="{{post.thumbnail.url}}"></a>
                     <div class="post-preview">
                         <h6 class="post-title">"{{post.headline}}"</h6>
                         <p class="post-intro">"{{post.sub_headline}}"</p>
-                        <a href="{% url 'post' post.slug %}">Read More</a>
+                        <a href="{{ post.slug }}"><b>Read More</b></a>
+                        {% if post.github %}
+                            <a href="{{post.github}}"target="_blank"><b> / Github</b></a>
+                        {% endif %}
+                        {% if post.demo %}
+                            <a href="{{post.demo}}"target="_blank"><b> / Demo</b></a>
+                        {% endif %}
                     </div>
                 </div>
             </article>
