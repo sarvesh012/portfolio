@@ -20,7 +20,6 @@ class Post(models.Model):
     created = models.DateTimeField(auto_now_add=True)
     active = models.BooleanField(default=False)
     featured = models.BooleanField(default=False)
-    tags = models.ManyToManyField(Tag, blank=True)
     slug = models.SlugField(null=True, blank=True)
     github = models.URLField(max_length=200, null=True, blank=True)
     demo = models.URLField(max_length=200, null=True, blank=True)

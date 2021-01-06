@@ -16,8 +16,10 @@
     --linkColor: #3c8fbe;
 
     --buttonColor:black;
+
+	--hrColor:rgb(211, 210, 202);
     
-    --maxWidth:1300px;
+    --maxWidth:1200px;
     --maxWidthPost:900px;
 
 
