@@ -75,9 +75,9 @@ hr {
 .search{
     display: flex;
     justify-content: center;
-    width: 90%;
+    width: 50%;
     margin: auto;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     margin-top: 60px;
     border: 2px solid var(--borderColor);
     border-radius: .25rem;
@@ -131,6 +131,10 @@ hr {
         "thumbnail"
         "post-preview"
         "post-action";
+    }
+
+    .search{
+        width: 95%;
     }
 
     .post-title-{
