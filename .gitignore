@@ -20,4 +20,4 @@ media
 # exclude everything
 static/img/*
 # exception to the rule
-!static/img/.gitkeep 
+# !static/img/.gitkeep
