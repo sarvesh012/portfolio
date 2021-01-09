@@ -1,3 +1,23 @@
+### Django ###
 env/
 db.sqlite3
-settings.py
+__pycache__/
+staticfiles/
+*.log
+*.pot
+*.pyc
+db.sqlite3
+db.sqlite3-journal
+media
+
+### Django.Python Stack ###
+# Byte-compiled / optimized / DLL files
+*.py[cod]
+*$py.class
+
+## esclude images in static folder
+# create a empty file .gitkeep to the img/ folder 
+# exclude everything
+static/img/*
+# exception to the rule
+!static/img/.gitkeep 

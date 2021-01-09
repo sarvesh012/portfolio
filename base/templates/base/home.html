@@ -10,9 +10,8 @@
             <div>
                 <img id="profile_pic" src="{% static 'img/img/adi.jpg' %}">
                 <h3 style="text-align: center;">Hi, I'm Adrian Allkoci</h3>
-                <p>I'm a junior full-stack web developer focused in web development.</p>
-                <p>Positive and pragmatic attitude, independent, selflearner.
-
+                <p>I'm a junior full-stack web developer with
+                    positive and pragmatic attitude, independent, selflearner.
                     Especially interested and curious in new callenges building webapps.</p>
                 <br>
             </div>
@@ -42,7 +41,6 @@
                     <!-- <li>AWS (RDS/S3)</li> -->
                     <li>Git</li>
                 </ul>
-
                 <ul>
                     <li>HTML/CSS</li>
                     <li>Bootstrap</li>
@@ -66,7 +64,7 @@
                     <div class="post-preview">
                         <h6 class="post-title">"{{post.headline}}"</h6>
                         <p class="post-intro">"{{post.sub_headline}}"</p>
-                        <a href="{{ post.slug }}"><b>Read More</b></a>
+                        <a href="{% url 'post' post.slug %}"><b>Read More</b></a>
                         {% if post.github %}
                             <a href="{{post.github}}"target="_blank"><b> / Github</b></a>
                         {% endif %}
