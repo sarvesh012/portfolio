@@ -18,7 +18,7 @@ media
 ## esclude images in static folder
 # create a empty file .gitkeep to the img/ folder 
 # exclude everything
-static/img/*?
+static/img/img/?
 # static/img/**
 # exception to the rule
-!static/img/adi.webp
+!static/img/img/adi.webp
