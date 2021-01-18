@@ -16,7 +16,7 @@ gunicorn==20.0.4
     # via -r requirements/production.in
 pillow==8.0.1
     # via -r requirements/production.in
-psycopg2==2.8.6
+psycopg2-binary==2.8.6
     # via -r requirements/production.in
 pytz==2020.5
     # via django
