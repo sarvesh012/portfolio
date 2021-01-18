@@ -16,11 +16,9 @@
     --linkColor: #3c8fbe;
 
     --buttonColor:black;
-
-	--hrColor:rgb(211, 210, 202);
     
-    --maxWidth:1200px;
-    --maxWidthPost:900px;
+	--hrColor:rgb(211, 210, 202);
+    --maxWidth:1300px;
 
 
 }
@@ -51,14 +49,12 @@ ul{
     list-style: none;
 }
 
-h1{font-size: 36px;}
-h2{font-size: 32px;}
+h1{font-size: 56px;}
+h2{font-size: 36px;}
 h3{font-size: 28px; text-align: center;}
 h4{font-size: 24px;}
 h5{font-size: 20px;}
-h6{font-size: 18px;}
-p{font-size: 16px;}
-
+h6{font-size: 16px;}
 
 /* Nav */
 
@@ -107,7 +103,7 @@ p{font-size: 16px;}
 	background-color: black;
 	border-radius: 50%;
 
-	margin: 2px;
+	margin: 5px;
 	border:2px solid var(--themeDotBorder);
 
 	-webkit-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
@@ -207,7 +203,6 @@ p{font-size: 16px;}
 }
 
 .post{
-	background-color: #fff;
 	border:1px solid var(--borderColor);
 	-webkit-box-shadow: -2px 7px 21px -9px rgba(0,0,0,0.75);
 	-moz-box-shadow: -2px 7px 21px -9px rgba(0,0,0,0.75);
@@ -218,11 +213,12 @@ p{font-size: 16px;}
 	display: block;
 	width: 100%;
 	height:180px;
-	object-fit: cover;
+	object-fit: fill;
 }
 
 .post-preview{
-    padding:10px;
+	background-color: #fff;
+	padding:15px;
 }
 
 .post-title{
@@ -286,7 +282,7 @@ p{font-size: 16px;}
 	margin-top: 10px;
 	width: 100%;
 	padding-top: 10px;
-    padding-bottom:10px; 
+	padding-bottom:10px; 
 	color: #fff;
 	background-color: var(--buttonColor);
 	border:none;

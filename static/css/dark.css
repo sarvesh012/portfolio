@@ -14,16 +14,11 @@
     --linkColor: #4da9b9;
 
 	--buttonColor:#426e91;
-	
-	--hrColor:rgb(69, 78, 78);
 
+	--hrColor:rgb(69, 78, 78);
 
 }
 
 body{
 	background: var(--mainColor);
-}
-
-#mail-wrapper{
-	background-color: #eaeaea;
 }

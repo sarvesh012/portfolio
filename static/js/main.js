@@ -17,11 +17,15 @@ for (var i=0; themeDots.length > i; i++){
 		setTheme(mode)
 	})
 }
+
+
 function setTheme(mode){
-if(mode == 'light'){
+	
+	// static variable from main.html
+
+	if(mode == 'light'){
 		document.getElementById('theme-style').href = static + '/default.css'
 	}
-
 	if(mode == 'dark'){
 		document.getElementById('theme-style').href = static + '/dark.css'
 	}

@@ -1,13 +1,9 @@
 
-
-
-/* posts.html style */
-
 .projects{
+    margin-top: 40px;
     background-color: var(--mainColor);
     border-bottom: none;
 }
-
 
 .projects-wraper-{
     max-width: 1020px;
@@ -16,14 +12,41 @@
 
 }
 
+/* search */
+.search{
+    max-width: 1020px;
+    margin: 30px auto;
+    display: flex;
+    flex-flow: column wrap;
+    align-items:flex-end;
+}
+
+#myInput{
+    box-sizing: border-box;
+    background-color: #fff;
+    /* padding: 5px 0 5px 5px; */
+    padding: 5px;
+    border: none;
+    /* margin:0 auto; */
+    min-width: 40%;
+    color: #000;
+    border: 1px solid;
+    border-radius: 5px;
+}
+
+#myInput:focus{
+    outline : none;
+}
+
+/* list posts */
 .post-{
     display: grid;
     grid-template-columns: minmax(180px, 0.5fr) 1fr;
     grid-template-rows: minmax(150px, 1fr) 25px;
     grid-template-areas: 
     "thumbnail post-preview"
-    "thumbnail post-action";
-    margin-bottom: 30px;
+    "thumbnail read";
+    margin-bottom: 20px;
 }
 
 
@@ -36,20 +59,16 @@
 
 .post-preview-{
     grid-area: post-preview;
-	padding-left: 15px;
+	padding:15px;
 }
 
 .post-action{
-    grid-area: post-action;
+    grid-area: read;
     margin-left: 15px;
 }
 
-.post-action>a{
-    margin-right: 15px;
-}
-
 .post-title-{
-    margin: 0;
+	margin: 0;
 }
 
 .post-intro-{
@@ -60,66 +79,13 @@ hr {
     border: 1px solid var(--hrColor);
 }
 
-.tags{
-    display: inline-block;
-    color: #fff;
-    background-color: #888;
-    border-radius: 5px;
-    margin: 2px;
-    padding: 2px 5px;
-    font-size: 12px;
-}
-
-/* search style */
-
-.search{
-    display: flex;
-    justify-content: center;
-    width: 50%;
-    margin: auto;
-    margin-bottom: 30px;
-    margin-top: 60px;
-    border: 2px solid var(--borderColor);
-    border-radius: .25rem;
-}
-
-#myInput{
-    width: 100%;
-    color: #000;
-    padding: 5px 10px;
-
-}
-
-
-/* post.html style */
-.blog-wraper{
-    margin-top: 60px;
-}
-
-.blog-post{
-    margin: 0 auto;
-    width: 95%;
-    max-width: 900px;
-    /* max-width: var(--maxWidthPost); */
-    justify-items: center;
-
-}
-
-.post-thumbnail{
-    margin: 0 auto;
-	display: block;
-	max-width: 100%;
-	max-height: 500px;
-	/* object-fit: cover; */
-}
-
 @media screen and (max-width: 800px){
     .post-{
         grid-template-columns: minmax(180px, 0.4fr) 1fr;
         grid-template-rows: minmax(100px, 1fr) 20px;
         grid-template-areas: 
         "thumbnail post-preview"
-        "thumbnail post-action";
+        "thumbnail read";
         height: auto;
     }
 }
@@ -130,14 +96,10 @@ hr {
         grid-template-areas: 
         "thumbnail"
         "post-preview"
-        "post-action";
+        "read";
     }
 
-    .search{
-        width: 95%;
-    }
-
-    .post-title-{
-        margin-top: 10px;
+    #myInput{
+        width: 100%;
     }
 }

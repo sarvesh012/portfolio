@@ -1,4 +1,5 @@
 ### Django ###
+
 env/
 db.sqlite3
 __pycache__/
@@ -11,14 +12,14 @@ db.sqlite3-journal
 media
 
 ### Django.Python Stack ###
+
 # Byte-compiled / optimized / DLL files
 *.py[cod]
 *$py.class
 
-## esclude images in static folder
-# create a empty file .gitkeep to the img/ folder 
+### esclude images in static folder
+
 # exclude everything
-#static/img/img/*?
 static/img/img/**
 # exception to the rule
 !static/img/img/adi.webp
