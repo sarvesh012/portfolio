@@ -7,7 +7,7 @@ DEBUG = False
 
 INTERNAL_IPS = [ '127.0.0.1', ]
 
-ALLOWED_HOSTS = ['10.24.102.189', 'localhost', 'demo.net']
+ALLOWED_HOSTS = ['10.24.102.196', 'localhost', 'demo.net']
 
 SITE_ID = 1
 #MEDIA_ROOT = "/home/ubuntu/media"
