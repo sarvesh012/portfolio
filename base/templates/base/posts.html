@@ -14,11 +14,11 @@
         <div class="search">
             <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search Post Title...">
         </div>
-        <div id="projects" class="projects-wraper-">
+        <main id="projects" class="projects-wraper-">
             {% for post in posts %}
                 <!-- <div> -->
                     <article class="post-">
-                        <img class="thumbnail-" src="{{post.thumbnail.url}}">
+                        <img class="thumbnail-" src="{{post.thumbnail.url}}" alt="{{post.img_alt}}">
                         <div class="post-preview-">
                             <a href="{% url 'post' post.slug %}"><h6 class="post-title-">{{post.headline}}</h6></a>
                             <p class="post-intro-">{{post.sub_headline}}</p>
@@ -38,8 +38,7 @@
                 {% empty %}
                 <h3>No posts found...</h3>
             {% endfor %}
-
-        </div>
+        </main>
     </div>
 </section>
 

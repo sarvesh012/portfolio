@@ -24,7 +24,7 @@ function setTheme(mode){
 	// static variable from main.html
 
 	if(mode == 'light'){
-		document.getElementById('theme-style').href = static + '/default.css'
+		document.getElementById('theme-style').href = static + '/white.css'
 	}
 	if(mode == 'dark'){
 		document.getElementById('theme-style').href = static + '/dark.css'

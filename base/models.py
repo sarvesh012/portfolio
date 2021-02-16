@@ -16,6 +16,7 @@ class Post(models.Model):
     headline = models.CharField(max_length=200)
     sub_headline = models.CharField(max_length=200, null=True, blank=True)
     thumbnail = models.ImageField(null=True, blank=True, upload_to="img", default="placeholder.png")
+    img_alt = models.CharField(max_length=200, null=True, blank=True)
     body = RichTextUploadingField(null=True, blank=True)
     created = models.DateTimeField(auto_now_add=True)
     active = models.BooleanField(default=False)

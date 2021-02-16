@@ -6,16 +6,15 @@
 
 {% block content %}
 
-<div class="blog-wraper">
+<article class="blog-wraper">
+    <header>
+        <h1>{{post.headline}}</h1>
+        <p>{{post.sub_headline}}</p>
+        <img class="post-thumbnail" src="{{post.thumbnail.url}}" alt="{{post.img_alt}}">
+    </header>
     <div class="blog-post">
-        <img class="post-thumbnail" src="{{post.thumbnail.url}}" alt="">
-        <!-- <h1>{{post.headline}}</h1> -->
-        <h2>{{post.headline}}</h2>
-
-        <h6>{{post.sub_headline}}</h6>
-
         <p>{{post.body|safe}}</p>
     </div>
-</div>
+</article>
 
 {% endblock %}
