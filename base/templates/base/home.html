@@ -4,65 +4,67 @@
 
 {% block content %}
 
-<section class="me">
+<section class="section-me">
     <div class="about-wraper">
-        <div class="left-col">
-            <div>
-                <img id="profile_pic" src="{% static 'img/img/adi.webp' %}">
-                <h3 style="text-align: center;">Hi, I'm Adrian Allkoci</h3>
-                <p>I'm a junior full-stack web developer with
-                    positive and pragmatic attitude, independent, selflearner.
-                    Especially interested and curious in new callenges building webapps.</p>
-                <br>
-            </div>
+        <div class="about">
+            <img id="profile_pic" src="{% static 'img/img/adi.webp' %}">
             <div class="social-links">
-                <!-- <ul>
-                    <li>Google: <a href="#" target="_blank">@AdrianAllkoci</a></li>
+                <ul>
+                    <!-- <li>Google: <a href="#" target="_blank">@AdrianAllkoci</a></li>
                     <li>Facebook: <a href="#" target="_blank">@AdrianAllkoci</a></li>
-                    <li>Instagram: <a href="#" target="_blank">@AdrianAllkoci</a></li>
-                </ul> -->
-                <ul>
-                    <li>Github: <a href="https://github.com/adialb" target="_blank">@Adrian</a></li>
-                    <li>Linkedin: <a href="https://www.linkedin.com/in/adrian-allkoci-964507203/" target="_blank">@Adrian</a></li>
-                    <li>Twitter: <a href="https://twitter.com/AdrianAllkoci" target="_blank">@Adrian</a></li>
+                    <li>Instagram: <a href="#" target="_blank">@AdrianAllkoci</a></li> -->
+                
+                    <li><a href="https://github.com/adialb" target="_blank"><b>Github</b></a></li>
+                    <li><a href="https://www.linkedin.com/in/adrian-allkoci-964507203/" target="_blank"><b>Linkedin</b></a></li>
+                    <li><a href="https://twitter.com/AdrianAllkoci" target="_blank"><b>Twitter</b></a></li>
                 </ul>
             </div>
         </div>
-        <div class="right-col">
-            <h3>My Skills</h3>
-            <p>Fullstack developer with primary focus on Django + JavaScript.</p>
-            <p>My projects are primarily coded using HTML5, CSS3 & JavaScript for Static websites and Portfolios.</p>
-            <p>I am loving to code with Python and Django in back-end for creating webapps.</p>
-            <div class="skills">
-                <ul>
-                    <li>Python</li>
-                    <li>Django</li>
-                    <li>Postgres</li>
-                    <!-- <li>AWS (RDS/S3)</li> -->
-                    <li>Git</li>
-                </ul>
-                <ul>
-                    <li>HTML/CSS</li>
-                    <li>Bootstrap</li>
-                    <li>JavaScript</li>
-                    <!-- <li>React</li> -->
-                </ul>
-
-            </div>
+        <div class="about-text">
+            <h1  style="text-align: center;">Hi, I'm Adrian Allkoci</h1>
+            <p>I'm a junior full-stack web developer with a positive and pragmatic attitude, independent, selflearner.
+                Especially interested and curious in new callenges building webapps.</p>
+            
+            <p>My primary focus are Django and JavaScript.
+                I am loving to code with Python, Django in back-end and HTML5, CSS3, 
+                JavaScript in front-end for creating webapps.</p>
         </div>
-        
     </div>
 </section>
-<section id="projects" class="projects">
+<section class="section-skills">
+    <div class="skills-container">
+        <h1  style="text-align: center;">My Skills</h1>
+        
+        <div class="skills">
+            <ul>
+                <li>Python</li>
+                <li>Django</li>
+                <li>Postgres</li>
+            </ul>
+            <ul>
+                <li>HTML/CSS</li>
+                <li>Bootstrap</li>
+                <li>JavaScript</li>
+                <!-- <li>React</li> -->
+            </ul>
+            <ul>
+                <li>Git</li>
+                <li>Docker</li>
+                <li>SSH</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<section id="projects" class="section-projects">
     <div class="projects-container">
-        <h3 style="text-align: center;">My Best Projects</h3>
+        <h1 style="text-align: center;">My Best Projects</h1>
         <div class="projects-wraper">
             {% for post in posts %}
             <article class="post">
                 <div>
                     <a href="{% url 'post' post.slug %}"><img class="thumbnail" src="{{post.thumbnail.url}}" alt="{{post.img_alt}}"></a>
                     <div class="post-preview">
-                        <h6 class="post-title">"{{post.headline}}"</h6>
+                        <h4 class="post-title">"{{post.headline}}"</h4>
                         <p class="post-intro">"{{post.sub_headline}}"</p>
                         <a href="{% url 'post' post.slug %}"><b>Read More</b></a>
                         {% if post.github %}
@@ -78,9 +80,9 @@
         </div>
     </div>
 </section>
-<section class="contact">
+<section class="section-contact">
     <div class="contact-container">
-        <h3 style="text-align: center;">Contact Me</h3>
+        <h1 style="text-align: center;">Contact Me</h1>
 
         <form id="contact-form" method="POST" action="{% url 'send_email' %}">
             {% csrf_token %}

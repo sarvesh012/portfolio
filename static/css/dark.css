@@ -1,6 +1,7 @@
 :root{
-	--mainColor:#2d353d;
-	--secondaryColor:#222b33;
+	--mainColor:#2a363b;
+	--secondaryColor:#1f3032;
+	--navColor:#3c484f;
 
 	--borderColor:#677f83;
 
@@ -12,11 +13,11 @@
 	--background-box:#44443dcc;
 
     --linkColor: #4da9b9;
+	--linkHover: #1a6886;
 
 	--buttonColor:#426e91;
 
 	--hrColor:rgb(69, 78, 78);
-
 }
 
 body{

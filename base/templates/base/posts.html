@@ -18,12 +18,12 @@
             {% for post in posts %}
                 <!-- <div> -->
                     <article class="post-">
-                        <img class="thumbnail-" src="{{post.thumbnail.url}}" alt="{{post.img_alt}}">
-                        <div class="post-preview-">
-                            <a href="{% url 'post' post.slug %}"><h6 class="post-title-">{{post.headline}}</h6></a>
+                        <!-- <img class="thumbnail-" src="{{post.thumbnail.url}}" alt="{{post.img_alt}}"> -->
+                        <!-- <div class="post-preview-"> -->
+                            <a href="{% url 'post' post.slug %}"><h3 class="post-title-">{{post.headline}}</h3></a>
                             <p class="post-intro-">{{post.sub_headline}}</p>
-                        </div>
-                        <div class="post-action">
+                        <!-- </div> -->
+                        <!-- <div class="post-action"> -->
                             <a href="{% url 'post' post.slug %}"><b>Read-More</b></a>
                             {% if post.github %}
                                 <a href="{{post.github}}"target="_blank"><b>Github</b></a>
@@ -32,7 +32,7 @@
                                 <a href="{{post.demo}}"target="_blank"><b>Demo</b></a>
                             {% endif %}
                             <hr>
-                        </div>
+                        <!-- </div> -->
                     </article>
                 <!-- </div> -->
                 {% empty %}
