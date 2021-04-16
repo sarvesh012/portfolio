@@ -1,3 +1,0 @@
--r production.txt
-pylint-django==2.3.0
-pip-tools==5.5.0
