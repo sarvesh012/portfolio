@@ -1,33 +1,23 @@
 
-let theme = localStorage.getItem('theme')
+// Search
+function myFunction() {
+	// Declare variables
+	var input, filter, project, post, title, i, txtTitle;
+	input = document.getElementById("myInput");
+	filter = input.value.toUpperCase();
+	project = document.getElementById("projects");
+	post = project.getElementsByTagName("article");
 
-if(theme == null){
-	setTheme('light')
-}else{
-	setTheme(theme)
-}
-
-let themeDots = document.getElementsByClassName('theme-dot')
-
-
-for (var i=0; themeDots.length > i; i++){
-	themeDots[i].addEventListener('click', function(){
-		let mode = this.dataset.mode
-		console.log('Option clicked:', mode)
-		setTheme(mode)
-	})
-}
-
-
-function setTheme(mode){
-	
-	// static variable from main.html
-
-	if(mode == 'light'){
-		document.getElementById('theme-style').href = static + '/white.css'
+//   Loop through all title posts, and hide those who don't match the search query
+	for (i = 0; i < post.length; i++) {
+		title = post[i].getElementsByClassName("post-title")[0];
+		if (title) {
+			txtTitle = title.textContent || title.innerText;
+			if (txtTitle.toUpperCase().indexOf(filter) > -1){
+			post[i].style.display = "";
+			} else {
+			post[i].style.display = "none";
+			}
+		}
 	}
-	if(mode == 'dark'){
-		document.getElementById('theme-style').href = static + '/dark.css'
-	}
-	localStorage.setItem('theme', mode)
 }

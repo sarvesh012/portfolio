@@ -1,0 +1,35 @@
+{% extends 'blog/base.html' %}
+<!-- {% load static %}
+{% block head-links %}
+    <link rel="stylesheet" href="{% static 'css/posts.css' %}">
+{% endblock %} -->
+
+{% block content %}
+
+<article class="blog-wraper">
+    <header>
+        <h1>{{post.headline}}</h1>
+        <div class="meta">
+            <time>{{post.created | date}}</time>
+
+            <div class="tags"> 
+                {% if post.github %}
+                    <a class="tag" href="{{post.github}}"target="_blank"><b>Github</b></a>
+                {% endif %}
+                {% if post.demo %}
+                    <a class="tag" href="{{post.demo}}"target="_blank"><b>Demo</b></a>
+                {% endif %}
+            </div>
+        </div>
+        <!-- <time>{{post.created | date}}</time> -->
+        <hr>
+        <p>{{post.sub_headline}}</p>
+        <!-- <img class="post-thumbnail" src="{{post.thumbnail.url}}" alt="{{post.img_alt}}"> -->
+    </header>
+    <div class="blog-post">
+        {{ post.body | safe }}
+        <!-- <p>{{ post.body | safe }}</p> -->
+    </div>
+</article>
+
+{% endblock %}

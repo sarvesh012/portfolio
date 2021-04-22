@@ -1,0 +1,36 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<section class="projects">
+    <div class="projects-container">
+        <div class="search">
+            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search Post Title...">
+        </div>
+        <main id="projects" class="projects-wraper">
+            {% for post in posts %}
+            <article class="post">
+                <a href="{% url 'post' post.slug %}"><h3 class="post-title">{{post.headline}}</h3></a>
+                <p class="post-intro">{{post.sub_headline}}</p>
+                <div class="meta">
+                    <time>{{post.created | date}}</time>
+
+                    <div class="tags"> 
+                        {% if post.github %}
+                            <a href="{{post.github}}"target="_blank"><b>Github</b></a>
+                        {% endif %}
+                        {% if post.demo %}
+                            <a href="{{post.demo}}"target="_blank"><b>Demo</b></a>
+                        {% endif %}
+                    </div>
+                </div>
+                <hr>
+            </article>
+
+            {% endfor %}
+        </main>
+    </div>
+</section>
+
+{% endblock %}

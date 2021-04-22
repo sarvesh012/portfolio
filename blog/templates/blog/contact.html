@@ -1,0 +1,31 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<section class="section-contact">
+    <div class="contact-container">
+        <h1 style="text-align: center;">Contact Me</h1>
+
+        <form id="contact-form" method="POST" action="{% url 'send_email' %}">
+            {% csrf_token %}
+            <a name="contact"></a>
+
+            <label>Name</label>
+            <input class="input-field" type="text" name="name" required>
+
+            <label>Subject</label>
+            <input class="input-field" type="text" name="subject" required>
+
+            <label>Email</label>
+            <input class="input-field" type="email" name="email" required>
+
+            <label>Message</label>
+            <textarea class="input-field" name="message" required></textarea>
+
+            <input id="submit-btn" type="submit" value="Send">
+        </form>
+    </div>
+</section> 
+
+{% endblock %}
