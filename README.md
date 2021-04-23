@@ -1,4 +1,6 @@
-# Portfolio website
-__Frontend in HTML, pure CSS (flexbox, grid) and vanilla Javascript__  
-__Backend in Python, Django Framework (for blog posts)__
+# Django Blog
+#### Video Demo:  https://www.youtube.com/watch?v=LEiuBfLsiSY
+#### Description: This is a simple blog project maked with python django framework and Javascript. 
 
+
+### The idea 
