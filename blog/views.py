@@ -19,7 +19,6 @@ def home(request):
 #     return render(request, 'blog/posts.html', context)
 
 def post(request, slug):
-    # post = get_object_or_404(Post, id=id)
     post = Post.objects.get(slug=slug)
     context = {'post':post}
     return render(request, 'blog/post.html', context)
